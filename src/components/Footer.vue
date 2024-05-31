@@ -6,8 +6,9 @@
       <img src="../assets/github.png" alt="Logo Github"
     /></a>
     <a href="https://github.com/Benjamin63B/">
-      <img src="../assets/linkedin.png" alt="Logo Github"
-    /></a>
+      <img src="../assets/linkedin.png" alt="Logo Github" /></a
+    ><br />
+    <small>Dernière mise à jour: <time datetime="2024-05-31">31 Mai 2024</time></small>
   </footer>
 </template>
 

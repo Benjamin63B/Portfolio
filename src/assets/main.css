@@ -133,7 +133,7 @@ footer {
   color: #fff; /* Couleur du texte */
   text-align: center; /* Centre le texte */
   bottom: 0; /* Alignement en bas */
-  padding-bottom: -20px; /* Réduit la marge basse */
+  padding-bottom: -15px; /* Réduit la marge basse */
   position: fixed; /* Position fixée */
   width: 100%; /* Largeur de 100% */
   font-size: 18px; /* Taille de police */
@@ -150,7 +150,7 @@ footer img {
 footer p {
   font-size: 14px; /* Taille de police */
   background-color: #12b6f3; /* Couleur de fond */
-  margin-bottom: -10px; /* Marge inférieure */
+  margin-bottom: -5px; /* Marge inférieure */
 }
 
 /* Styles pour les cadres de projets */
@@ -185,16 +185,33 @@ footer p {
 
 /* Styles spécifiques pour la page d'accueil */
 .home {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-  padding-top: 20px;
+  font-size: 36px; /* Taille de police */
+  color: #333; /* Couleur du texte */
+  margin-bottom: 20px; /* Marge en bas */
+  padding-top: 20px; /* Espacement en haut */
 }
 
+/* Styles pour la présentation */
 .presentation {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
+  font-size: 18px; /* Taille de police */
+  color: #007bff; /* Couleur du texte */
+  margin-bottom: 30px; /* Marge en bas */
+}
+
+/* Styles pour la biographie */
+.bio {
+  font-size: 24px; /* Taille de police */
+  color: #12b6f3; /* Couleur du texte */
+  line-height: 1; /* Hauteur de ligne */
+  margin: 0 auto; /* Centre horizontalement */
+  width: 50%; /* Largeur */
+}
+
+/* Styles pour les projets */
+.projet {
+  font-size: 28px !important; /* Taille de police avec importance */
+  color: #12b6f3; /* Couleur du texte */
+  margin-top: 30px; /* Marge en haut */
 }
 
 /* Styles pour la page "À propos" */
