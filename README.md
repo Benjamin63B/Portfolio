@@ -1,6 +1,6 @@
 # portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Portfolio créer avec VSCode et Vue.JS
 
 ## Recommended IDE Setup
 
