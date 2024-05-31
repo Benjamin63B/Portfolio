@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="modal fade" id="cv" tabindex="-1" aria-labelledby="cv" aria-hidden="true">
     <div class="modal-dialog">

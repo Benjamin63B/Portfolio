@@ -1,6 +1,5 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="skills-container">
+  <div :class="{ 'skills-container': true, loaded: isLoaded }">
     <div class="skills">
       <h2 class="skill-title">Mes compétences</h2>
       <div v-for="skill in skills" :key="skill.name" class="skill">
@@ -39,7 +38,8 @@ export default {
         { name: 'CSS', percentage: 72, color: '#007bff', showPopup: false },
         { name: 'JavaScript', percentage: 63, color: '#3399ff', showPopup: false },
         { name: 'Vue.js', percentage: 52, color: '#66b2ff', showPopup: false }
-      ]
+      ],
+      isLoaded: false // Ajoutez cette propriété pour suivre le chargement de la page
     }
   },
   methods: {
@@ -51,10 +51,15 @@ export default {
       const skill = this.skills.find((skill) => skill.name === skillName)
       skill.showPopup = false
     }
+  },
+  mounted() {
+    // Marquez la page comme chargée après un court délai (vous pouvez ajuster le délai selon vos besoins)
+    setTimeout(() => {
+      this.isLoaded = true
+    }, 500)
   }
 }
 </script>
-
 <style scoped>
 @import url('../assets/main.css');
 </style>

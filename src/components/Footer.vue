@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <footer>
     <p>Benjamin BESANTE &copy; - {{ currentYear }}</p>
