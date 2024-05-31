@@ -1,0 +1,548 @@
+/* Import de la police Lexend depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+/* Styles de base pour l'ensemble de la page */
+#app,
+html,
+body {
+  background-color: #ddd; /* Couleur de fond */
+  padding: 0; /* Supprime les marges internes par défaut du corps */
+  height: 100%; /* Utilise toute la hauteur de la fenêtre */
+  margin: 0;
+  font-family: 'Lexend', sans-serif; /* Police de caractères par défaut */
+}
+
+/* Styles pour les conteneurs */
+.container {
+  background-color: #ddd;
+  min-height: 60vh; /* La hauteur minimale du conteneur */
+  display: flex; /* Utilisation de Flexbox pour centrer verticalement le contenu */
+  flex-direction: column; /* Dispose le contenu en colonne */
+  justify-content: center; /* Centre le contenu verticalement */
+  padding: 20px;
+}
+
+/* Styles pour les titres */
+h1 {
+  text-align: center; /* Centre le texte */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2,
+h3,
+h4 {
+  text-align: center; /* Centre le texte */
+  font-size: 28px !important;
+  margin-top: 20px;
+}
+
+h5,
+h6 {
+  font-size: 24px;
+  color: #12b6f3; /* Couleur bleue */
+  text-align: center; /* Centre le texte */
+}
+
+/* Styles pour les paragraphes */
+p {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Styles pour l'animation de chargement */
+.loader {
+  border: 4px solid #ffffff; /* Bordure de 4px solide, couleur gris clair */
+  border-top: 4px solid #3498db; /* Bordure supérieure de 4px solide, couleur bleue */
+  border-radius: 50%; /* Bordure arrondie à 50% */
+  width: 16px; /* Largeur */
+  height: 16px; /* Hauteur */
+  animation: spin 1s linear infinite; /* Animation de rotation */
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+  background-color: #142331; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  padding: 10px; /* Espacement interne */
+  display: flex; /* Affichage flex */
+  font-family: 'Lexend', sans-serif; /* Police de caractères */
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: center; /* Alignement vertical */
+}
+
+/* Styles pour la liste de navigation */
+.navbar-nav {
+  display: flex; /* Affichage flex */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Alignement vertical */
+}
+
+/* Styles pour les images dans les liens de navigation */
+nav a img {
+  height: 90px; /* Hauteur de l'image */
+  width: 90px; /* Largeur de l'image */
+  object-fit: cover; /* Ajustement de l'image */
+}
+
+/* Styles pour les liens de navigation */
+nav a {
+  color: #fff !important; /* Couleur du texte */
+  font-weight: bold; /* Police en gras */
+  font-size: 16px; /* Taille de la police */
+  text-transform: uppercase; /* Texte en majuscules */
+  padding: 0 20px; /* Espacement interne */
+}
+
+/* Styles au survol des liens de navigation */
+nav a:hover {
+  text-underline-position: under; /* Soulignement au survol */
+}
+
+/* Styles pour les images dans les liens */
+a img {
+  padding: 10px 0 10px 0; /* Espacement interne */
+  height: 50px; /* Hauteur de l'image */
+}
+
+/* Styles pour les liens de navigation avec classe .nav-link */
+a.nav-link {
+  color: white; /* Couleur du texte */
+  text-decoration: none; /* Pas de soulignement */
+  padding: 10px; /* Espacement interne */
+  border-radius: 8px; /* Coins arrondis */
+}
+
+/* Styles au survol des liens de navigation avec classe .nav-link */
+a.nav-link:hover {
+  background-color: #fff; /* Couleur de fond au survol */
+  color: black !important; /* Couleur du texte au survol */
+  border-radius: 8px; /* Coins arrondis */
+}
+
+/* Styles généraux pour les liens de navigation */
+.nav-link {
+  text-align: center; /* Centre le texte */
+  margin: 0px 0px 0 300px; /* Marge du lien */
+}
+
+/* Styles pour le pied de page */
+footer {
+  font-family: 'Lexend', sans-serif; /* Police Lexend */
+  background-color: #12b6f3; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  text-align: center; /* Centre le texte */
+  bottom: 0; /* Alignement en bas */
+  padding-bottom: -20px; /* Réduit la marge basse */
+  position: fixed; /* Position fixée */
+  width: 100%; /* Largeur de 100% */
+  font-size: 18px; /* Taille de police */
+}
+
+/* Styles pour les images dans le pied de page */
+footer img {
+  height: 50px; /* Hauteur */
+  width: auto; /* Largeur automatique */
+  margin: 5px; /* Marge */
+}
+
+/* Styles pour les paragraphes dans le pied de page */
+footer p {
+  font-size: 14px; /* Taille de police */
+  background-color: #12b6f3; /* Couleur de fond */
+  margin-bottom: -10px; /* Marge inférieure */
+}
+
+/* Styles pour les cadres de projets */
+.cadre-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px; /* Espacement vers le haut */
+  font-size: 12px;
+}
+
+.cadre {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%;
+  min-width: 250px;
+  text-align: center;
+}
+
+.cadre h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.cadre img {
+  width: 100%;
+  max-width: 200px; /* Largeur maximale de l'image */
+  height: auto;
+  margin-bottom: 10px; /* Espacement vers le bas */
+}
+
+/* Styles spécifiques pour la page d'accueil */
+.home {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.presentation {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Styles pour la page "À propos" */
+.about {
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 32px !important; /* Taille de police de base */
+  color: #007bff; /* Couleur bleue */
+  margin-bottom: 10px;
+}
+
+/* Styles pour les logos de profil */
+.profile-logo {
+  margin: 0 auto; /* Centre horizontalement */
+  display: block; /* Pour que margin: 0 auto; fonctionne */
+  height: 128px !important;
+  width: 128px !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+/* Styles pour les modales */
+.modal-dialog {
+  max-width: 800px; /* Largeur maximale de la boîte de dialogue modale */
+  margin: 1.75rem auto; /* Marge extérieure pour centrer la modale verticalement */
+}
+
+.modal-content {
+  border: none; /* Supprimer la bordure par défaut */
+  border-radius: 10px; /* Arrondir les coins */
+}
+
+.modal-header {
+  display: flex; /* Utiliser flexbox pour aligner les éléments */
+  justify-content: space-between; /* Répartir l'espace disponible entre les éléments */
+  align-items: center; /* Centrer verticalement les éléments */
+  background-color: #007bff; /* Couleur de fond de l'en-tête */
+  border-top-left-radius: 10px; /* Arrondir le coin supérieur gauche */
+  border-top-right-radius: 10px; /* Arrondir le coin supérieur droit */
+  padding: 1rem 1.5rem; /* Ajouter un peu de remplissage */
+}
+
+.modal-title {
+  font-weight: bold; /* Gras */
+  color: #fff; /* Couleur du texte */
+  margin: 0; /* Supprimer la marge */
+}
+
+.btn-close {
+  border: none; /* Supprimer la bordure */
+  font-size: 18px;
+  color: #fff; /* Couleur du texte */
+  opacity: 1; /* Opacité par défaut */
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  opacity: 1; /* Augmenter l'opacité au survol/focus */
+}
+
+.modal-body {
+  padding: 20px; /* Espacement intérieur */
+}
+
+.modal-body p {
+  font-size: 20px; /* Espacement intérieur */
+}
+
+/* Styles pour les éléments dans la modale */
+.modal-body .cv {
+  border-radius: 50%; /* Bordure arrondie */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la zone */
+}
+
+.modal-body .cahier {
+  width: 128px; /* Largeur fixe */
+  height: 128px; /* Hauteur fixe */
+  border-radius: 50%; /* Bordure arrondie */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la zone */
+}
+
+.modal-body .espace_c {
+  width: 128px; /* Largeur fixe */
+  height: 128px; /* Hauteur fixe */
+  border-radius: 50%; /* Bordure arrondie */
+  object-fit: cover; /* Redimensionne l'image pour qu'elle remplisse la zone */
+}
+
+.modal-body .github {
+  width: 42px; /* Largeur fixe */
+  height: 42px; /* Hauteur fixe */
+  margin: auto; /* Centre horizontalement */
+  padding-block: 10px; /* Espace autour du contenu */
+  text-align: center; /* Centre le texte */
+  object-fit: contain; /* Ajuste la taille de l'image sans déformer */
+}
+
+.modal-body a {
+  font-size: 18px; /* Taille de police */
+}
+
+/* Styles pour les conteneurs de compétences */
+.skills-container {
+  display: flex; /* Utilisation de Flexbox */
+  align-items: center; /* Alignement vertical */
+  margin: 0 240px; /* Marge extérieure gauche et droite */
+}
+
+/* Styles pour les compétences */
+.skills {
+  flex: 1; /* Utilisation de tout l'espace disponible */
+}
+
+/* Styles pour les titres de compétences */
+.skill-title {
+  text-align: left; /* Alignement à gauche */
+  margin-bottom: 20px; /* Marge inférieure */
+}
+
+/* Styles pour les noms de compétences */
+.skill-name {
+  margin-bottom: 5px; /* Marge inférieure */
+}
+
+/* Styles pour les barres de progression */
+.progress {
+  position: relative; /* Position relative pour les éléments enfants positionnés absolument */
+  margin-bottom: 20px; /* Marge inférieure */
+}
+
+/* Styles pour les conteneurs de barres de progression */
+.progress-bar-container {
+  height: 20px; /* Hauteur fixe */
+  border-radius: 10px; /* Bordure arrondie */
+  overflow: hidden; /* Masque le débordement */
+}
+
+/* Styles pour les barres de progression */
+.progress-bar {
+  height: 100%; /* Hauteur de la barre de progression */
+}
+
+/* Styles pour les fenêtres contextuelles de progression */
+.progress-popup {
+  position: absolute; /* Position absolue */
+  background-color: fff; /* Couleur de fond */
+  padding: auto; /* Remplissage automatique */
+  border-radius: 5px; /* Bordure arrondie */
+  color: black; /* Couleur du texte */
+}
+
+/* Styles pour le conteneur d'image de profil */
+.profile-picture-container {
+  margin-left: 20px; /* Marge à gauche */
+}
+
+/* Styles pour l'image de profil */
+.profile-picture {
+  width: 256px; /* Largeur */
+  height: 256px; /* Hauteur */
+  margin-top: 60px; /* Marge supérieure */
+  border-radius: 50%; /* Bordure arrondie */
+  border: 5px solid #0079fe; /* Bordure */
+}
+
+/* Styles pour les textes animés */
+.animated-text {
+  animation: slide-down 1.5s ease-out; /* Animation de descente */
+  margin: 0.5em 0; /* Marge autour du texte */
+}
+
+/* Styles pour le nom animé */
+.name-animated {
+  position: relative; /* Position relative pour les pseudo-éléments */
+  animation: fade-in 1s ease-out; /* Animation de fondu */
+  font-weight: bold; /* Police en gras */
+  transition: background 1s ease; /* Transition de couleur de fond */
+  background: #007bff; /* Couleur de fond initiale */
+  -webkit-background-clip: text; /* Permet d'appliquer la couleur de fond au texte */
+  color: transparent; /* Rend le texte transparent */
+}
+
+/* Styles pour le nom animé au survol */
+.name-animated:hover::after {
+  transform: scaleX(1); /* Échelle horizontale de l'élément pseudo ::after */
+  background: #007bff; /* Couleur de fond */
+}
+
+/* Styles pour l'en-tête animé */
+.animated-header {
+  text-align: center; /* Centre le texte */
+  margin-top: 20px; /* Marge supérieure */
+}
+
+/* Styles pour les textes en bleu */
+.blue-text {
+  color: #12b6f3; /* Couleur bleue */
+}
+
+/* Styles pour les textes changeants */
+.changing-text {
+  display: inline-block; /* Affichage en ligne avec bloc d'éléments */
+  transition:
+    transform 1s,
+    opacity 1s; /* Transition pour la transformation et l'opacité */
+  color: #12b6f3; /* Couleur bleue par défaut */
+}
+
+/* Styles pour les textes en montée */
+.slide-up {
+  transform: translateY(-20px); /* Translation vers le haut */
+  opacity: 0; /* Opacité initiale */
+}
+
+/* Styles pour le logo de profil */
+.profile-logo {
+  margin: 0 auto; /* Centre horizontalement */
+  display: block; /* Affichage en bloc */
+}
+
+/* Styles pour le formulaire de contact */
+.contact-form {
+  max-width: 600px; /* Largeur maximale du formulaire */
+  margin: auto; /* Centre le formulaire horizontalement */
+  padding: 10px; /* Espacement interne */
+}
+
+/* Styles pour les groupes de formulaires */
+.form-group {
+  margin-bottom: 15px; /* Marge inférieure entre les groupes */
+}
+
+/* Styles pour les étiquettes des champs de formulaire */
+label {
+  display: block; /* Affiche les étiquettes en bloc */
+  font-weight: bold; /* Police en gras */
+  margin-top: 30px; /* Marge supérieure */
+}
+
+/* Styles pour les champs de texte, les champs de courriel et les zones de texte */
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 100%; /* Largeur à 100% */
+  padding: 8px; /* Espacement interne */
+  border: 1px solid #ccc; /* Bordure de 1px solide */
+  border-radius: 20px; /* Bordure arrondie */
+}
+
+/* Styles pour les boutons de soumission du formulaire */
+button[type='submit'] {
+  background-color: #007bff; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 4px; /* Bordure arrondie */
+  padding: 10px 20px; /* Espacement interne */
+  cursor: pointer; /* Curseur pointeur */
+  display: flex; /* Affichage en ligne */
+  align-items: center; /* Alignement vertical */
+  justify-content: center; /* Alignement horizontal */
+  margin: 0 auto; /* Centre horizontalement */
+}
+
+/* Styles au survol des boutons de soumission */
+button[type='submit']:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+/* Styles pour les boutons de soumission désactivés */
+button[type='submit']:disabled {
+  background-color: #5a9bf8; /* Couleur de fond désactivée */
+  cursor: not-allowed; /* Curseur interdit */
+}
+
+/* Définition de l'animation de rotation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Rotation initiale */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotation complète */
+  }
+}
+
+/* Définition de l'animation de fondu */
+@keyframes fade-in {
+  from {
+    opacity: 0; /* Opacité initiale */
+  }
+  to {
+    opacity: 1; /* Opacité finale */
+  }
+}
+
+/* Styles pour l'alerte */
+.alert {
+  margin-top: 10px; /* Marge supérieure */
+  background-color: #dff0d8; /* Couleur de fond */
+  border: 1px solid #d0e9c6; /* Bordure de 1px solide */
+  color: #3c763d; /* Couleur du texte */
+  padding: 15px; /* Espacement interne */
+  border-radius: 20px; /* Bordure arrondie */
+  text-align: center; /* Centre le texte */
+  margin: 10px auto 0 auto; /* Marge automatique */
+}
+
+/* Définition des animations */
+
+@keyframes slide-in {
+  from {
+    opacity: 0; /* Opacité initiale */
+    transform: translateX(-50px); /* Translation initiale */
+  }
+  to {
+    opacity: 1; /* Opacité finale */
+    transform: translateX(0); /* Translation finale */
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(-50px); /* Translation initiale */
+  }
+  to {
+    opacity: 1; /* Opacité finale */
+    transform: translateY(0); /* Translation finale */
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0; /* Opacité initiale */
+  }
+  to {
+    opacity: 1; /* Opacité finale */
+  }
+}
+
+@keyframes slide-up-animation {
+  from {
+    opacity: 0; /* Opacité initiale */
+    transform: translateY(-50px); /* Translation vers le haut */
+  }
+  to {
+    opacity: 1; /* Opacité finale */
+    transform: translateY(0); /* Retour à la position initiale */
+  }
+}
