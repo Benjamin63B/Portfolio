@@ -11,7 +11,11 @@
         >
           <div
             class="progress-bar"
-            :style="{ backgroundColor: skill.color, width: skill.percentage + '%' }"
+            :style="{
+              backgroundColor: skill.color,
+              width: isLoaded ? skill.percentage + '%' : '0%'
+            }"
+            :class="{ loaded: isLoaded }"
           ></div>
           <div
             v-if="skill.showPopup"
@@ -60,6 +64,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 @import url('../assets/main.css');
 </style>

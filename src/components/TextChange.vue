@@ -14,6 +14,11 @@
         currentTextContact
       }}</span>
     </p>
+    <p v-if="showProjet" class="animated-text">
+      <span :class="{ 'changing-text': true, 'slide-up': textProjet }">{{
+        currentTextProjet
+      }}</span>
+    </p>
   </div>
 </template>
 
@@ -29,16 +34,22 @@ export default {
       textsSecond: ['Bienvenue sur mon portfolio.', 'Explorons ensemble les projets.'],
       textIndexSecond: 0,
       textPresentation: false,
-      currentTextContact: '',
-      textsContact: ['Vous pouvez me joindre ici', 'Page créer avec emailjs'],
+      currentTextContact: 'Vous pouvez me joindre ici',
+      textsContact: ['Vous pouvez me joindre ici', 'Page créée avec emailjs'],
       textIndexContact: 0,
       textContact: false,
+      currentTextProjet: 'Retrouvez mes projets',
+      textsProjet: ['Retrouvez mes projets', 'Projet CEF & Perso'],
+      textIndexProjet: 0,
+      textProjet: false,
       showAbout: false,
       showPresentation: false,
       showContact: false,
+      showProjet: false,
       intervalAbout: null,
       intervalPresentation: null,
       intervalContact: null,
+      intervalProjet: null,
       rotationDelay: 5000, // Délai avant changement de texte
       animationDuration: 500 // Durée de l'animation
     }
@@ -56,60 +67,79 @@ export default {
       this.showAbout = route.name === 'home'
       this.showPresentation = route.name === 'About'
       this.showContact = route.name === 'Contact'
+      this.showProjet = route.name === 'Projet'
 
       if (this.showAbout && !this.intervalAbout) {
-        this.startTextRotation()
+        this.startTextRotation('About')
       } else if (!this.showAbout && this.intervalAbout) {
         clearInterval(this.intervalAbout)
         this.intervalAbout = null
       }
 
       if (this.showPresentation && !this.intervalPresentation) {
-        this.startTextRotationSecond()
+        this.startTextRotation('Presentation')
       } else if (!this.showPresentation && this.intervalPresentation) {
         clearInterval(this.intervalPresentation)
         this.intervalPresentation = null
       }
 
       if (this.showContact && !this.intervalContact) {
-        this.startTextRotationContact()
+        this.startTextRotation('Contact')
       } else if (!this.showContact && this.intervalContact) {
         clearInterval(this.intervalContact)
         this.intervalContact = null
       }
+
+      if (this.showProjet && !this.intervalProjet) {
+        this.startTextRotation('Projet')
+      } else if (!this.showProjet && this.intervalProjet) {
+        clearInterval(this.intervalProjet)
+        this.intervalProjet = null
+      }
     },
-    startTextRotation() {
-      this.intervalAbout = setInterval(() => {
-        this.textAbout = true
+    startTextRotation(type) {
+      const intervalMap = {
+        About: 'intervalAbout',
+        Presentation: 'intervalPresentation',
+        Contact: 'intervalContact',
+        Projet: 'intervalProjet'
+      }
+
+      const textKeyMap = {
+        About: 'textAbout',
+        Presentation: 'textPresentation',
+        Contact: 'textContact',
+        Projet: 'textProjet'
+      }
+
+      const textIndexMap = {
+        About: 'textIndex',
+        Presentation: 'textIndexSecond',
+        Contact: 'textIndexContact',
+        Projet: 'textIndexProjet'
+      }
+
+      const currentTextMap = {
+        About: 'currentText',
+        Presentation: 'currentTextSecond',
+        Contact: 'currentTextContact',
+        Projet: 'currentTextProjet'
+      }
+
+      const textsMap = {
+        About: this.texts,
+        Presentation: this.textsSecond,
+        Contact: this.textsContact,
+        Projet: this.textsProjet
+      }
+
+      this[intervalMap[type]] = setInterval(() => {
+        this[textKeyMap[type]] = true
         setTimeout(() => {
-          this.textIndex = (this.textIndex + 1) % this.texts.length
-          this.currentText = this.texts[this.textIndex]
+          this[textIndexMap[type]] = (this[textIndexMap[type]] + 1) % textsMap[type].length
+          this[currentTextMap[type]] = textsMap[type][this[textIndexMap[type]]]
           setTimeout(() => {
-            this.textAbout = false
-          }, this.animationDuration)
-        }, this.animationDuration)
-      }, this.rotationDelay)
-    },
-    startTextRotationSecond() {
-      this.intervalPresentation = setInterval(() => {
-        this.textPresentation = true
-        setTimeout(() => {
-          this.textIndexSecond = (this.textIndexSecond + 1) % this.textsSecond.length
-          this.currentTextSecond = this.textsSecond[this.textIndexSecond]
-          setTimeout(() => {
-            this.textPresentation = false
-          }, this.animationDuration)
-        }, this.animationDuration)
-      }, this.rotationDelay)
-    },
-    startTextRotationContact() {
-      this.intervalContact = setInterval(() => {
-        this.textContact = true
-        setTimeout(() => {
-          this.textIndexContact = (this.textIndexContact + 1) % this.textsContact.length
-          this.currentTextContact = this.textsContact[this.textIndexContact]
-          setTimeout(() => {
-            this.textContact = false
+            this[textKeyMap[type]] = false
           }, this.animationDuration)
         }, this.animationDuration)
       }, this.rotationDelay)
@@ -119,6 +149,7 @@ export default {
     clearInterval(this.intervalAbout)
     clearInterval(this.intervalPresentation)
     clearInterval(this.intervalContact)
+    clearInterval(this.intervalProjet)
   }
 }
 </script>

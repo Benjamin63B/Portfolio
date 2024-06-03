@@ -12,7 +12,13 @@
           ></button>
         </div>
         <div class="modal-body">
-          <img src="@/assets/profil.jpg" alt="Logo CV" class="cv" /><br />
+          <img
+            src="@/assets/profil.jpg"
+            alt="Logo CV"
+            class="cv"
+            height="128px"
+            width="128px"
+          /><br />
           <img src="@/assets/github.png" alt="GitHub" class="github" /><a
             href="https://github.com/Benjamin63B/Mon_CV"
             >Lien repository</a
@@ -74,6 +80,31 @@
             >Lien repository</a
           ><br />
           <small>Dernière mise à jour: <time datetime="2024-03-28">03 Mars 2024</time></small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="creasmela"
+    tabindex="-1"
+    aria-labelledby="creasmela"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="creamelalabel">🕯️ Créas Mêla</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img src="../assets/logo-creas-mela.webp" alt="Créas Mêla" class="creasmela" /><br />
+          <a href="https://github.com/Benjamin63B/Commentaire">Lien</a><br />
         </div>
       </div>
     </div>

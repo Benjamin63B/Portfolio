@@ -156,6 +156,7 @@ footer p {
 /* Styles pour les cadres de projets */
 .cadre-row {
   display: flex;
+  flex-wrap: wrap; /* Permet aux cadres de passer à la ligne si nécessaire */
   justify-content: space-around;
   margin-top: 30px; /* Espacement vers le haut */
   font-size: 12px;
@@ -166,9 +167,10 @@ footer p {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 30%;
+  width: 45%; /* Largeur ajustée pour deux cadres par ligne */
   min-width: 250px;
   text-align: center;
+  margin-bottom: 20px; /* Espacement entre les cadres */
 }
 
 .cadre h2 {
@@ -250,7 +252,7 @@ footer p {
   display: flex; /* Utiliser flexbox pour aligner les éléments */
   justify-content: space-between; /* Répartir l'espace disponible entre les éléments */
   align-items: center; /* Centrer verticalement les éléments */
-  background-color: #007bff; /* Couleur de fond de l'en-tête */
+  background-color: #12b6f3; /* Couleur de fond de l'en-tête */
   border-top-left-radius: 10px; /* Arrondir le coin supérieur gauche */
   border-top-right-radius: 10px; /* Arrondir le coin supérieur droit */
   padding: 1rem 1.5rem; /* Ajouter un peu de remplissage */
@@ -269,6 +271,10 @@ footer p {
   opacity: 1; /* Opacité par défaut */
 }
 
+.info {
+  font-family: 'Lexend', sans-serif !important;
+}
+
 .btn-close:hover,
 .btn-close:focus {
   opacity: 1; /* Augmenter l'opacité au survol/focus */
@@ -280,6 +286,12 @@ footer p {
 
 .modal-body p {
   font-size: 20px; /* Espacement intérieur */
+}
+
+.modal-body a {
+  text-decoration: none;
+  color: #12b6f3;
+  padding-top: 15px;
 }
 
 /* Styles pour les éléments dans la modale */
@@ -313,6 +325,10 @@ footer p {
 
 .modal-body a {
   font-size: 18px; /* Taille de police */
+}
+
+.modal-body {
+  justify-content: center;
 }
 
 /* Styles pour les conteneurs de compétences */
@@ -354,20 +370,26 @@ footer p {
 /* Styles pour les barres de progression */
 .progress-bar {
   height: 100%; /* Hauteur de la barre de progression */
-  transition: width 0.5s ease;
+  transition: width 2s ease; /* Durée de transition ajustée pour une animation plus longue */
+}
+
+.skills-container.loaded .progress-bar {
+  background-color: initial; /* Permet de réinitialiser la couleur de fond */
 }
 
 .skills-container:not(.loaded) .progress-bar {
   width: 0;
 }
 
-/* Styles pour les fenêtres contextuelles de progression */
+/* Styles pour les popups */
 .progress-popup {
-  position: absolute; /* Position absolue */
-  background-color: fff; /* Couleur de fond */
-  padding: auto; /* Remplissage automatique */
-  border-radius: 5px; /* Bordure arrondie */
-  color: black; /* Couleur du texte */
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 /* Styles pour le conteneur d'image de profil */
