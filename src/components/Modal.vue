@@ -19,6 +19,7 @@
             height="128px"
             width="128px"
           /><br />
+          <p>Technologies utilisées : HTML - CSS</p>
           <img src="@/assets/github.png" alt="GitHub" class="github" /><a
             href="https://github.com/Benjamin63B/Mon_CV"
             >Lien repository</a
@@ -75,6 +76,7 @@
         </div>
         <div class="modal-body">
           <img src="../assets/espace_commentaire.png" alt="Logo CV" class="espace_c" /><br />
+          <p>Technologies utilisées : JS</p>
           <img src="../assets/github.png" alt="GitHub" class="github" /><a
             href="https://github.com/Benjamin63B/Commentaire"
             >Lien repository</a

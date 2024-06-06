@@ -266,13 +266,13 @@ footer p {
 
 .btn-close {
   border: none; /* Supprimer la bordure */
-  font-size: 18px;
+  font-size: 18px; /* Taille de la police */
   color: #fff; /* Couleur du texte */
   opacity: 1; /* Opacité par défaut */
 }
 
 .info {
-  font-family: 'Lexend', sans-serif !important;
+  font-family: 'Lexend', sans-serif !important; /* Police Lexend */
 }
 
 .btn-close:hover,
@@ -286,12 +286,13 @@ footer p {
 
 .modal-body p {
   font-size: 20px; /* Espacement intérieur */
+  font-style: italic; /* italic */
 }
 
 .modal-body a {
-  text-decoration: none;
-  color: #12b6f3;
-  padding-top: 15px;
+  text-decoration: none; /* Supprimé l'effet */
+  color: #12b6f3; /* Couleur du texte */
+  padding-top: 15px; /* Espacement intérieur */
 }
 
 /* Styles pour les éléments dans la modale */
