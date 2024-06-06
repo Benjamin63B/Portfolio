@@ -94,9 +94,18 @@ nav a {
   padding: 0 20px; /* Espacement interne */
 }
 
-/* Styles au survol des liens de navigation */
-nav a:hover {
-  text-underline-position: under; /* Soulignement au survol */
+/* Styles pour les liens de navigation */
+.nav-link {
+  color: #fff !important; /* Couleur du texte */
+  font-weight: bold; /* Police en gras */
+  font-size: 16px; /* Taille de la police */
+  text-transform: uppercase; /* Texte en majuscules */
+  padding: 0 20px; /* Espacement interne */
+}
+
+/* Styles pour les liens actifs, sauf navbar-brand */
+.nav-link.router-link-active {
+  border-bottom: 2px solid #fff; /* Trait sous l'élément actif */
 }
 
 /* Styles pour les images dans les liens */
@@ -171,6 +180,11 @@ footer p {
   min-width: 250px;
   text-align: center;
   margin-bottom: 20px; /* Espacement entre les cadres */
+  transition: box-shadow 0.5s ease; /* Transition douce pour l'effet d'ombre */
+}
+
+.cadre:hover {
+  box-shadow: 4px 4px 8px #0056b3; /* Ombre plus prononcée sur hover */
 }
 
 .cadre h2 {
@@ -258,7 +272,7 @@ footer p {
   display: flex; /* Utiliser flexbox pour aligner les éléments */
   justify-content: space-between; /* Répartir l'espace disponible entre les éléments */
   align-items: center; /* Centrer verticalement les éléments */
-  background-color: #12b6f3; /* Couleur de fond de l'en-tête */
+  background-color: #007bff; /* Couleur de fond de l'en-tête */
   border-top-left-radius: 10px; /* Arrondir le coin supérieur gauche */
   border-top-right-radius: 10px; /* Arrondir le coin supérieur droit */
   padding: 1rem 1.5rem; /* Ajouter un peu de remplissage */

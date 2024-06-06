@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/contact', // Chemin pour la page de contact
       name: 'Contact', // Nom de la route
       component: Contact // Composant de contact à afficher
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'error',
+      component: () => import('@/views/NotFound.vue')
     }
   ]
 })

@@ -106,7 +106,7 @@
         </div>
         <div class="modal-body">
           <img src="../assets/logo-creas-mela.webp" alt="Créas Mêla" class="creasmela" /><br />
-          <a href="https://github.com/Benjamin63B/Commentaire">Lien</a><br />
+          <a href="https://creasmela.com/">Lien</a><br />
         </div>
       </div>
     </div>
