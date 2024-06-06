@@ -241,6 +241,12 @@ footer p {
 .modal-dialog {
   max-width: 800px; /* Largeur maximale de la boîte de dialogue modale */
   margin: 1.75rem auto; /* Marge extérieure pour centrer la modale verticalement */
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 .modal-content {
