@@ -15,7 +15,7 @@ body {
 /* Styles pour les conteneurs */
 .container {
   background-color: #ddd;
-  min-height: 60vh; /* La hauteur minimale du conteneur */
+  min-height: 80vh; /* La hauteur minimale du conteneur */
   display: flex; /* Utilisation de Flexbox pour centrer verticalement le contenu */
   flex-direction: column; /* Dispose le contenu en colonne */
   justify-content: center; /* Centre le contenu verticalement */
@@ -133,6 +133,14 @@ a.nav-link:hover {
 .nav-link {
   text-align: center; /* Centre le texte */
   margin: 0px 0px 0 300px; /* Marge du lien */
+}
+
+@media screen and (max-width: 768px) {
+  .align-left-on-mobile {
+    text-align: center; /* Centrer le texte */
+    margin-left: -230px; /* Réinitialiser la marge */
+    padding: 50px; /* Ajouter un padding pour centrer le texte */
+  }
 }
 
 /* Styles pour le pied de page */

@@ -4,24 +4,36 @@
       <router-link class="navbar-brand" to="/">
         <img src="../assets/logo.png" alt="Logo" />
       </router-link>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarID"
-        aria-controls="navbarID"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button @click="toggleMenu" class="navbar-toggler" type="button" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarID">
-        <div class="navbar-nav">
-          <router-link class="nav-link" to="/about">👤 Qui je suis ?</router-link>
-          <router-link class="nav-link" to="/projet">📙 Projets</router-link>
-          <router-link class="nav-link" to="/contact">✉️ Contact</router-link>
+      <div class="collapse navbar-collapse" :class="{ show: isMenuOpen }" id="navbarID">
+        <div class="navbar-nav align-left-on-mobile">
+          <router-link class="nav-link" to="/about" @click="closeMenu"
+            >👤 Qui je suis ?</router-link
+          >
+          <router-link class="nav-link" to="/projet" @click="closeMenu">📙 Projets</router-link>
+          <router-link class="nav-link" to="/contact" @click="closeMenu">✉️ Contact</router-link>
         </div>
       </div>
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
+    },
+    closeMenu() {
+      this.isMenuOpen = false
+    }
+  }
+}
+</script>
