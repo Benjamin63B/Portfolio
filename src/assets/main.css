@@ -231,6 +231,11 @@ footer p {
   width: 50%; /* Largeur */
 }
 
+.bio br {
+  display: block; /* Assure que chaque <br> soit sur une nouvelle ligne */
+  margin-bottom: 1em; /* Ajoute un espace équivalent à la hauteur de ligne après chaque <br> */
+}
+
 /* Styles pour les projets */
 .projet {
   font-size: 28px !important; /* Taille de police avec importance */
@@ -247,6 +252,53 @@ footer p {
   font-size: 32px !important; /* Taille de police de base */
   color: #007bff; /* Couleur bleue */
   margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .home {
+    font-size: 24px; /* Réduire la taille de police pour les écrans moyens */
+  }
+
+  .presentation {
+    font-size: 16px; /* Réduire la taille de police pour les écrans moyens */
+  }
+
+  .bio {
+    font-size: 20px; /* Réduire la taille de police pour les écrans moyens */
+    width: 70%; /* Ajuster la largeur pour les écrans moyens */
+  }
+
+  .projet {
+    font-size: 24px !important; /* Réduire la taille de police pour les écrans moyens */
+  }
+
+  .about-container h2 {
+    font-size: 28px !important; /* Réduire la taille de police pour les écrans moyens */
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    font-size: 20px; /* Réduire la taille de police pour les petits écrans */
+  }
+
+  .presentation {
+    font-size: 14px; /* Réduire la taille de police pour les petits écrans */
+  }
+
+  .bio {
+    font-size: 18px; /* Réduire la taille de police pour les petits écrans */
+    width: 90%; /* Ajuster la largeur pour les petits écrans */
+  }
+
+  .projet {
+    font-size: 20px !important; /* Réduire la taille de police pour les petits écrans */
+  }
+
+  .about-container h2 {
+    font-size: 24px !important; /* Réduire la taille de police pour les petits écrans */
+  }
 }
 
 /* Styles pour les logos de profil */
@@ -410,6 +462,93 @@ footer p {
   width: 0;
 }
 
+@media (max-width: 1200px) {
+  .skills-container {
+    margin: 0 120px; /* Réduire la marge pour les écrans moyens */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column; /* Empiler les éléments verticalement pour les écrans plus petits */
+    margin: 0 40px; /* Réduire la marge pour les écrans petits */
+  }
+}
+
+/* Styles pour les compétences */
+.skills {
+  flex: 1; /* Utilisation de tout l'espace disponible */
+}
+
+/* Styles pour les titres de compétences */
+.skill-title {
+  text-align: left; /* Alignement à gauche */
+  margin-bottom: 20px; /* Marge inférieure */
+}
+
+@media (max-width: 768px) {
+  .skill-title {
+    text-align: center; /* Centre les titres sur les petits écrans */
+  }
+}
+
+/* Styles pour les noms de compétences */
+.skill-name {
+  margin-bottom: 5px; /* Marge inférieure */
+}
+
+/* Styles pour les barres de progression */
+.progress {
+  position: relative; /* Position relative pour les éléments enfants positionnés absolument */
+  margin-bottom: 20px; /* Marge inférieure */
+}
+
+/* Styles pour les conteneurs de barres de progression */
+.progress-bar-container {
+  height: 20px; /* Hauteur fixe */
+  border-radius: 10px; /* Bordure arrondie */
+  overflow: hidden; /* Masque le débordement */
+}
+
+@media (max-width: 480px) {
+  .progress-bar-container {
+    height: 15px; /* Réduire la hauteur de la barre de progression sur les petits écrans */
+  }
+}
+
+/* Styles pour les barres de progression */
+.progress-bar {
+  height: 100%; /* Hauteur de la barre de progression */
+  transition: width 2s ease; /* Durée de transition ajustée pour une animation plus longue */
+}
+
+.skills-container.loaded .progress-bar {
+  background-color: initial; /* Permet de réinitialiser la couleur de fond */
+}
+
+.skills-container:not(.loaded) .progress-bar {
+  width: 0;
+}
+
+/* Styles pour les popups */
+.progress-popup {
+  position: absolute;
+  top: -25px;
+  background-color: #000;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .progress-popup {
+    font-size: 10px; /* Réduire la taille de la police pour les petits écrans */
+    top: -20px; /* Ajuster la position */
+  }
+}
+
 /* Styles pour les popups */
 .progress-popup {
   position: absolute;
@@ -435,6 +574,33 @@ footer p {
   border: 5px solid #0079fe; /* Bordure */
 }
 
+@media (max-width: 1200px) {
+  .profile-picture {
+    width: 200px; /* Réduire la largeur pour les écrans moyens */
+    height: 200px; /* Réduire la hauteur pour les écrans moyens */
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-picture-container {
+    margin-left: 0; /* Enlever la marge à gauche pour les petits écrans */
+    margin-top: 20px; /* Ajouter une marge supérieure */
+  }
+
+  .profile-picture {
+    width: 150px; /* Réduire davantage la largeur pour les petits écrans */
+    height: 150px; /* Réduire davantage la hauteur pour les petits écrans */
+    margin-top: 0; /* Enlever la marge supérieure pour les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-picture {
+    width: 120px; /* Réduire la largeur pour les très petits écrans */
+    height: 120px; /* Réduire la hauteur pour les très petits écrans */
+  }
+}
+
 /* Styles pour les textes animés */
 .animated-text {
   animation: slide-down 1.5s ease-out; /* Animation de descente */
@@ -456,6 +622,42 @@ footer p {
 .name-animated:hover::after {
   transform: scaleX(1); /* Échelle horizontale de l'élément pseudo ::after */
   background: #007bff; /* Couleur de fond */
+}
+
+.name-animated-1 {
+  position: relative; /* Position relative pour les pseudo-éléments */
+  color: #007bff; /* Couleur de fond initiale */
+}
+
+.name-animated-2 {
+  position: relative; /* Position relative pour les pseudo-éléments */
+  color: transparent; /* Rendre le texte transparent */
+  background-image: linear-gradient(
+    to top,
+    #12b6f3,
+    #0079fe
+  ); /* Dégradé de couleurs horizontales */
+  -webkit-background-clip: text; /* Permet au dégradé de remplir le texte */
+  background-clip: text; /* Permet au dégradé de remplir le texte */
+  display: inline-block; /* Permet d'appliquer des propriétés de bloc sans affecter le contenu */
+  padding: 5px; /* Ajout de remplissage pour séparer le texte du contour */
+}
+
+.name-animated-2::before,
+.name-animated-2::after {
+  content: ''; /* Contenu vide pour les pseudo-éléments */
+  position: absolute; /* Position absolue pour placer les coins */
+  border: 2px solid #66b2ff; /* Contour de 2px solide rouge pour les coins */
+}
+
+.name-animated-2::before {
+  top: 0px; /* Positionnement du coin supérieur */
+  right: -2px; /* Positionnement du coin droit */
+}
+
+.name-animated-2::after {
+  bottom: 0px; /* Positionnement du coin inférieur */
+  left: -2px; /* Positionnement du coin gauche */
 }
 
 /* Styles pour l'en-tête animé */

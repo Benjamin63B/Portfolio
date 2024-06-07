@@ -20,7 +20,11 @@ import Footer from '@/components/Footer.vue'
       <p class="bio">
         Âgé de 29 ans, passionné d'informatique et de développement web. J'ai acquis mes compétences
         de manière autodidacte et je suis prêt à relever de nouveaux défis dans le domaine du
-        développement !
+        développement ! <br />
+        J'habite à <span class="name-animated-1">Clermont-Ferrand</span><br />
+        Je suis passionné par le monde de la
+        <span class="name-animated-1">cigarette Électronique</span><br />
+        J'ai oublié mon pseudo : <span class="name-animated-2">CookyyFR</span>
       </p>
     </div>
   </div>
