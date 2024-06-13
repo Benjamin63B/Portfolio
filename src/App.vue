@@ -15,13 +15,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="app">
-    <Loading v-if="isLoading" />
-    <div v-else>
-      <Header />
-      <router-view />
-      <Footer />
-    </div>
+  <Loading v-if="isLoading" />
+  <div v-else>
+    <Header />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
