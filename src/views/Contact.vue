@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="contact-form">
-      <h1>✉️ Contact</h1>
+      <h1 class="contact">✉️ Contact</h1>
       <TextChange /><br />
       <form @submit.prevent="sendEmail">
         <div class="form-group">
-          <label for="name">Nom :</label>
+          <label for="name">Prénom :</label>
           <input
             type="text"
             id="name"
-            placeholder="Entrez un nom"
+            placeholder="Entrez un prénom"
             v-model="formData.name"
             required
           />

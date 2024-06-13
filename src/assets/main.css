@@ -81,8 +81,8 @@ p {
 
 /* Styles pour les images dans les liens de navigation */
 nav a img {
-  height: 90px; /* Hauteur de l'image */
-  width: 90px; /* Largeur de l'image */
+  height: 80px; /* Hauteur de l'image */
+  width: 80px; /* Largeur de l'image */
   object-fit: cover; /* Ajustement de l'image */
 }
 
@@ -694,10 +694,12 @@ footer p {
   position: relative; /* Position relative pour les pseudo-éléments */
   color: transparent; /* Rendre le texte transparent */
   background-image: linear-gradient(
-    to top,
-    #12b6f3,
-    #0079fe
-  ); /* Dégradé de couleurs horizontales */
+    to bottom,
+    #000000 12%,
+    /* Noir au bas */ #0079fe 33%,
+    /* Bleu foncé à 33% */ #12b6f3 66%,
+    /* Bleu clair à 66% */ #ffffff 100% /* Blanc en haut */
+  ); /* Dégradé de couleurs verticales */
   -webkit-background-clip: text; /* Permet au dégradé de remplir le texte */
   background-clip: text; /* Permet au dégradé de remplir le texte */
   display: inline-block; /* Permet d'appliquer des propriétés de bloc sans affecter le contenu */
@@ -708,17 +710,6 @@ footer p {
 .name-animated-2::after {
   content: ''; /* Contenu vide pour les pseudo-éléments */
   position: absolute; /* Position absolue pour placer les coins */
-  border: 2px solid #66b2ff; /* Contour de 2px solide rouge pour les coins */
-}
-
-.name-animated-2::before {
-  top: 0px; /* Positionnement du coin supérieur */
-  right: -2px; /* Positionnement du coin droit */
-}
-
-.name-animated-2::after {
-  bottom: 0px; /* Positionnement du coin inférieur */
-  left: -2px; /* Positionnement du coin gauche */
 }
 
 /* Styles pour l'en-tête animé */
@@ -757,7 +748,7 @@ footer p {
 .contact-form {
   max-width: 600px; /* Largeur maximale du formulaire */
   margin: auto; /* Centre le formulaire horizontalement */
-  padding: 10px; /* Espacement interne */
+  /* Espacement interne */
 }
 
 /* Styles pour les groupes de formulaires */
@@ -837,7 +828,7 @@ button[type='submit']:disabled {
   padding: 15px; /* Espacement interne */
   border-radius: 20px; /* Bordure arrondie */
   text-align: center; /* Centre le texte */
-  margin: 10px auto 0 auto; /* Marge automatique */
+  margin: 10px auto 20px; /* Marge automatique */
 }
 
 /* Définition des animations */

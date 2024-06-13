@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       currentText: 'Back-End / Front-End',
-      texts: ['Back-End / Front-End.', 'au Centre Européen de France.'],
+      texts: ['Back-End / Front-End.', 'au Centre Européen de Formation.'],
       textIndex: 0,
       textAbout: false,
       currentTextSecond: 'Bienvenue sur mon portfolio',
@@ -35,7 +35,7 @@ export default {
       textIndexSecond: 0,
       textPresentation: false,
       currentTextContact: 'Vous pouvez me joindre ici',
-      textsContact: ['Vous pouvez me joindre ici', 'Page créée avec emailjs'],
+      textsContact: ['Vous pouvez me joindre ici 😉', 'Page créée avec Email JS.'],
       textIndexContact: 0,
       textContact: false,
       currentTextProjet: 'Retrouvez mes projets',
