@@ -512,33 +512,41 @@ footer p {
   width: 0;
 }
 
+/* Styles responsive */
 @media (max-width: 1200px) {
   .skills-container {
-    margin: 0 120px; /* Réduire la marge pour les écrans moyens */
+    margin: 0 120px; /* Réduire la marge extérieure sur les grands écrans */
+  }
+}
+
+@media (max-width: 992px) {
+  .skills-container {
+    margin: 0 80px; /* Réduire la marge extérieure sur les écrans moyens */
   }
 }
 
 @media (max-width: 768px) {
   .skills-container {
-    flex-direction: column; /* Empiler les éléments verticalement pour les écrans plus petits */
-    margin: 0 40px; /* Réduire la marge pour les écrans petits */
+    margin: 0 40px; /* Réduire la marge extérieure sur les tablettes */
   }
 }
 
-/* Styles pour les compétences */
-.skills {
-  flex: 1; /* Utilisation de tout l'espace disponible */
-}
+@media (max-width: 576px) {
+  .skills-container {
+    margin: 0 20px; /* Réduire la marge extérieure sur les petits écrans */
+    flex-direction: column; /* Passer en disposition colonne sur les petits écrans */
+  }
 
-/* Styles pour les titres de compétences */
-.skill-title {
-  text-align: left; /* Alignement à gauche */
-  margin-bottom: 20px; /* Marge inférieure */
-}
+  .skills {
+    margin-bottom: 20px; /* Ajouter une marge inférieure entre les sections de compétences */
+  }
 
-@media (max-width: 768px) {
   .skill-title {
-    text-align: center; /* Centre les titres sur les petits écrans */
+    text-align: center; /* Centrer les titres sur les petits écrans */
+  }
+
+  .progress-bar-container {
+    width: 100%; /* Assurer que la barre de progression utilise toute la largeur disponible */
   }
 }
 
@@ -626,8 +634,9 @@ footer p {
 
 @media (max-width: 1200px) {
   .profile-picture {
-    width: 200px; /* Réduire la largeur pour les écrans moyens */
-    height: 200px; /* Réduire la hauteur pour les écrans moyens */
+    width: 180px; /* Réduire la largeur pour les écrans moyens */
+    height: 1800px; /* Réduire la hauteur pour les écrans moyens */
+    margin-bottom: 50px;
   }
 }
 
@@ -635,6 +644,7 @@ footer p {
   .profile-picture-container {
     margin-left: 0; /* Enlever la marge à gauche pour les petits écrans */
     margin-top: 20px; /* Ajouter une marge supérieure */
+    margin-bottom: 20px;
   }
 
   .profile-picture {
@@ -646,8 +656,9 @@ footer p {
 
 @media (max-width: 480px) {
   .profile-picture {
-    width: 120px; /* Réduire la largeur pour les très petits écrans */
-    height: 120px; /* Réduire la hauteur pour les très petits écrans */
+    width: 180px; /* Réduire la largeur pour les très petits écrans */
+    height: 180px; /* Réduire la hauteur pour les très petits écrans */
+    margin-bottom: 100px;
   }
 }
 
