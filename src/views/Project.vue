@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import Footer from '@/components/Footer.vue'
-import Header from '@/components/Header.vue'
 import Modal from '@/components/Modal.vue'
 import TextChange from '@/components/TextChange.vue'
 </script>
 
 <template>
-  <Header />
   <h2 class="projet"><a name="projet"></a>📙 Projets</h2>
   <TextChange /><br />
   <div class="cadre-row">
@@ -49,5 +47,9 @@ import TextChange from '@/components/TextChange.vue'
       </button>
     </div>
   </div>
+  <p class="info">
+    Retrouvez tout les projet sur mon
+    <a href="https://github.com/Benjamin63B?tab=repositories"><img src="../assets/github.png" /></a>
+  </p>
   <Footer />
 </template>

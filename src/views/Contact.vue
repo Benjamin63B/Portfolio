@@ -1,29 +1,52 @@
 <template>
   <div>
-    <Header />
     <div class="contact-form">
-      <h2>Contact</h2>
+      <h1>✉️ Contact</h1>
       <TextChange /><br />
       <form @submit.prevent="sendEmail">
         <div class="form-group">
           <label for="name">Nom :</label>
-          <input type="text" id="name" v-model="formData.name" required />
+          <input
+            type="text"
+            id="name"
+            placeholder="Entrez un nom"
+            v-model="formData.name"
+            required
+          />
         </div>
         <div class="form-group">
           <label for="email">Email :</label>
-          <input type="email" id="email" v-model="formData.email" required />
+          <input
+            type="email"
+            id="email"
+            placeholder="Entrez un e-mail valide"
+            v-model="formData.email"
+            required
+          />
         </div>
         <div class="form-group">
           <label for="subject">Objet :</label>
-          <input type="text" id="subject" v-model="formData.subject" required />
+          <input
+            type="text"
+            id="subject"
+            placeholder="Entrez un objet"
+            v-model="formData.subject"
+            required
+          />
         </div>
         <div class="form-group">
           <label for="message">Message :</label>
-          <textarea id="message" rows="4" v-model="formData.message" required></textarea>
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Entrez un message..."
+            v-model="formData.message"
+            required
+          ></textarea>
         </div>
         <button type="submit" :disabled="isSending">
           <span v-if="isSending" class="loader"></span>
-          <span v-else>Envoyer</span>
+          <span v-else><i class="fas fa-paper-plane"></i> Envoyer</span>
         </button>
         <div v-if="emailSent" class="alert">✅ Email envoyé avec succès !</div>
       </form>
@@ -34,13 +57,11 @@
 
 <script>
 import Footer from '@/components/Footer.vue'
-import Header from '@/components/Header.vue'
 import TextChange from '@/components/TextChange.vue'
 import emailjs from 'emailjs-com'
 
 export default {
   components: {
-    Header,
     TextChange,
     Footer
   },

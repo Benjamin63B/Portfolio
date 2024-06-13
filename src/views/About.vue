@@ -1,11 +1,9 @@
 <script setup>
-import Header from '@/components/Header.vue'
 import TextChange from '@/components/TextChange.vue'
 import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
-  <Header />
   <div class="about">
     <div class="about-container">
       <h1 class="animated-text"><span class="name-animated">Benjamin BESANTE</span></h1>

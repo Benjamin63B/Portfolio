@@ -1,6 +1,9 @@
+<!-- App.vue -->
 <script setup>
 import { ref, onMounted } from 'vue'
 import Loading from '@/components/Loading.vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 const isLoading = ref(true)
 
@@ -14,7 +17,11 @@ onMounted(() => {
 <template>
   <div id="app">
     <Loading v-if="isLoading" />
-    <router-view v-else />
+    <div v-else>
+      <Header />
+      <router-view />
+      <Footer />
+    </div>
   </div>
 </template>
 

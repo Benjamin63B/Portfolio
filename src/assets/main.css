@@ -10,6 +10,7 @@ body {
   height: 100%; /* Utilise toute la hauteur de la fenêtre */
   margin: 0;
   font-family: 'Lexend', sans-serif; /* Police de caractères par défaut */
+  width: 100%;
 }
 
 /* Styles pour les conteneurs */
@@ -179,6 +180,20 @@ footer p {
   font-size: 12px;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .cadre-row {
+    height: 100vh; /* Centrer les cadres sur les écrans plus petits */
+    margin-bottom: 16vh; /* Réduire l'espacement vers le haut */
+  }
+}
+
+@media (max-width: 480px) {
+  .cadre-row {
+    font-size: 10px; /* Réduire la taille de la police pour les écrans très petits */
+  }
+}
+
 .cadre {
   background-color: #ffffff;
   border-radius: 5px;
@@ -243,12 +258,29 @@ footer p {
   margin-top: 30px; /* Marge en haut */
 }
 
+.contact {
+  font-size: 28px !important; /* Taille de police avec importance */
+  color: #12b6f3; /* Couleur du texte */
+  margin-top: 30px; /* Marge en haut */
+}
+
 /* Styles pour la page "À propos" */
 .about {
   text-align: center;
 }
 
+/* Styles pour la page "À propos" */
+.contact {
+  text-align: center;
+}
+
 .about-container h2 {
+  font-size: 32px !important; /* Taille de police de base */
+  color: #007bff; /* Couleur bleue */
+  margin-bottom: 10px;
+}
+
+.contact-container h2 {
   font-size: 32px !important; /* Taille de police de base */
   color: #007bff; /* Couleur bleue */
   margin-bottom: 10px;
@@ -273,6 +305,12 @@ footer p {
     font-size: 24px !important; /* Réduire la taille de police pour les écrans moyens */
   }
 
+  .contact {
+    font-size: 28px !important; /* Taille de police avec importance */
+    color: #12b6f3; /* Couleur du texte */
+    margin-top: 30px; /* Marge en haut */
+  }
+
   .about-container h2 {
     font-size: 28px !important; /* Réduire la taille de police pour les écrans moyens */
   }
@@ -294,6 +332,12 @@ footer p {
 
   .projet {
     font-size: 20px !important; /* Réduire la taille de police pour les petits écrans */
+  }
+
+  .contact {
+    font-size: 28px !important; /* Taille de police avec importance */
+    color: #12b6f3; /* Couleur du texte */
+    margin-top: 30px; /* Marge en haut */
   }
 
   .about-container h2 {
@@ -353,6 +397,12 @@ footer p {
 
 .info {
   font-family: 'Lexend', sans-serif !important; /* Police Lexend */
+  color: #12b6f3;
+}
+
+.info img {
+  height: 40px;
+  width: auto;
 }
 
 .btn-close:hover,
@@ -717,8 +767,9 @@ input[type='email'],
 textarea {
   width: 100%; /* Largeur à 100% */
   padding: 8px; /* Espacement interne */
-  border: 1px solid #ccc; /* Bordure de 1px solide */
-  border-radius: 20px; /* Bordure arrondie */
+  border: 1px solid #0056b3; /* Bordure de 1px solide */
+  border-radius: 8px; /* Bordure arrondie */
+  box-shadow: 2px 2px 4px #0056b3; /* Ombre plus prononcée sur hover */
 }
 
 /* Styles pour les boutons de soumission du formulaire */

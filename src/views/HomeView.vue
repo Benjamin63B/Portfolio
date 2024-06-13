@@ -1,5 +1,4 @@
 <script setup>
-import Header from '@/components/Header.vue'
 import Skills from '@/components/Skills.vue'
 import TextChange from '@/components/TextChange.vue'
 import Footer from '@/components/Footer.vue'
@@ -7,7 +6,6 @@ import Footer from '@/components/Footer.vue'
 
 <template>
   <main>
-    <Header />
     <h1 class="animated-text">Bonjour, je suis <span class="name-animated">Benjamin</span></h1>
     <TextChange />
     <Skills />
