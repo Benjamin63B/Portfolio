@@ -48,7 +48,7 @@ import TextChange from '@/components/TextChange.vue'
     </div>
   </div>
   <p class="info">
-    Retrouvez tout les projet sur mon
+    Retrouvez tous les projets sur mon
     <a href="https://github.com/Benjamin63B?tab=repositories" target="_blank"
       ><img src="../assets/github.png"
     /></a>

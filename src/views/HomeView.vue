@@ -12,3 +12,7 @@ import Footer from '@/components/Footer.vue'
     <Footer />
   </main>
 </template>
+
+<style>
+@import url('@/assets/main.css');
+</style>

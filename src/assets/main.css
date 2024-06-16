@@ -286,6 +286,13 @@ footer p {
   margin-bottom: 10px;
 }
 
+.skills-container h2 {
+  font-size: 32px !important; /* Taille de police de base */
+  color: #007bff; /* Couleur bleue */
+  text-align: left;
+  margin-bottom: 10px;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .home {
@@ -471,7 +478,11 @@ footer p {
 
 /* Styles pour les compétences */
 .skills {
-  flex: 1; /* Utilisation de tout l'espace disponible */
+  width: 100%;
+}
+
+.skill {
+  color: black; /* Couleur du texte */
 }
 
 /* Styles pour les titres de compétences */
@@ -482,13 +493,30 @@ footer p {
 
 /* Styles pour les noms de compétences */
 .skill-name {
-  margin-bottom: 5px; /* Marge inférieure */
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 /* Styles pour les barres de progression */
 .progress {
-  position: relative; /* Position relative pour les éléments enfants positionnés absolument */
-  margin-bottom: 20px; /* Marge inférieure */
+  position: relative;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 4s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-percentage {
+  position: absolute;
+  color: white;
 }
 
 /* Styles pour les conteneurs de barres de progression */
@@ -502,10 +530,6 @@ footer p {
 .progress-bar {
   height: 100%; /* Hauteur de la barre de progression */
   transition: width 2s ease; /* Durée de transition ajustée pour une animation plus longue */
-}
-
-.skills-container.loaded .progress-bar {
-  background-color: initial; /* Permet de réinitialiser la couleur de fond */
 }
 
 .skills-container:not(.loaded) .progress-bar {
@@ -566,6 +590,15 @@ footer p {
   height: 20px; /* Hauteur fixe */
   border-radius: 10px; /* Bordure arrondie */
   overflow: hidden; /* Masque le débordement */
+}
+
+.progress:hover {
+  box-shadow: 0px 4px 8px #007bff; /* Ombre au passage de la souris */
+}
+
+/* Condition pour ajouter l'ombre */
+.progress-bar:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre au passage de la souris */
 }
 
 @media (max-width: 480px) {
@@ -630,6 +663,12 @@ footer p {
   margin-top: 60px; /* Marge supérieure */
   border-radius: 50%; /* Bordure arrondie */
   border: 5px solid #0079fe; /* Bordure */
+  transition: transform 0.5s ease; /* Transition pour l'effet flip */
+}
+
+.profile-picture:hover {
+  transform: rotateY(160deg);
+  box-shadow: 0px 10px 20px #12b6f3; /* Ombre lors du survol */
 }
 
 @media (max-width: 1200px) {
@@ -797,6 +836,41 @@ button[type='submit']:hover {
 button[type='submit']:disabled {
   background-color: #5a9bf8; /* Couleur de fond désactivée */
   cursor: not-allowed; /* Curseur interdit */
+}
+
+/* Styles pour les boutons */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.info-button {
+  padding: 10px 10px;
+  background-color: #12b6f3; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.info-button:hover {
+  background-color: #007bff; /* Couleur de fond au survol */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .info-button {
+    flex-basis: 50%;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-button {
+    text-align: center;
+  }
 }
 
 /* Définition de l'animation de rotation */

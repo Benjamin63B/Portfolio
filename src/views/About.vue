@@ -25,6 +25,7 @@ import Footer from '@/components/Footer.vue'
         J'ai oublié mon pseudo : <span class="name-animated-2">CookyyFR</span>
       </p>
     </div>
+    <br />
   </div>
   <Footer />
 </template>
