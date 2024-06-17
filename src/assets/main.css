@@ -151,7 +151,6 @@ footer {
   color: #fff; /* Couleur du texte */
   text-align: center; /* Centre le texte */
   bottom: 0; /* Alignement en bas */
-  padding-bottom: -15px; /* Réduit la marge basse */
   position: fixed; /* Position fixée */
   width: 100%; /* Largeur de 100% */
   font-size: 18px; /* Taille de police */

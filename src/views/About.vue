@@ -16,9 +16,8 @@ import Footer from '@/components/Footer.vue'
         />
       </div>
       <p class="bio">
-        Âgé de 29 ans, passionné d'informatique et de développement web. J'ai acquis mes compétences
-        de manière autodidacte et je suis prêt à relever de nouveaux défis dans le domaine du
-        développement ! <br />
+        Âgé de 29 ans, j'ai toujours été passionné d'informatique et de développement web. J'ai
+        acquis mes compétences de manière autodidacte et suis prêt à relever de nouveaux défis<br />
         J'habite à <span class="name-animated-1">Clermont-Ferrand</span><br />
         Je suis passionné par le monde de la
         <span class="name-animated-1">cigarette Électronique</span><br />

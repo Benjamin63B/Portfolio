@@ -44,7 +44,9 @@
         </div>
         <div class="modal-body">
           <img src="../assets/La socketterie.png" alt="Logo La Sockettterie" class="cahier" /><br />
-          <p>Le cahier des charges à était fait sur Word.</p>
+          <p>Le cahier des charges a été fait sur Word.</p>
+          <br />
+          <p>Technologies utilisées: Word</p>
           <a
             href="../assets/projets/Cahier des charges - Benjamin BESANTE.doc"
             download="Cahier des charges - Benjamin BESANTE.doc"
