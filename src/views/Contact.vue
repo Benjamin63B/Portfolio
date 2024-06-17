@@ -46,7 +46,7 @@
         </div>
         <button type="submit" :disabled="isSending">
           <span v-if="isSending" class="loader"></span>
-          <span v-else><i class="fas fa-paper-plane"></i> Envoyer</span>
+          <span v-else>📨 Envoyer</span>
         </button>
         <div v-if="emailSent" class="alert">✅ Email envoyé avec succès !</div>
       </form>
