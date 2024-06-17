@@ -7,7 +7,7 @@
     <a href="https://fr.linkedin.com/in/benjamin-besante-4b59bb2a1" target="_blank">
       <img src="../assets/linkedin.png" alt="Logo Github" /></a
     ><br />
-    <small>Dernière mise à jour: <time datetime="2024-06-13">13 Juin 2024</time></small>
+    <small>Dernière mise à jour: <time datetime="2024-06-17">17 Juin 2024</time></small>
   </footer>
 </template>
 
