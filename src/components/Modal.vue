@@ -108,6 +108,7 @@
         </div>
         <div class="modal-body">
           <img src="../assets/logo-creas-mela.webp" alt="Créas Mêla" class="creasmela" /><br />
+          <p>Technologies utilisées : WordPress - WooCommerce</p>
           <a href="https://creasmela.com/">Lien</a><br />
         </div>
       </div>
